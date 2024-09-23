@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Huduma</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        background-color: aliceblue;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    a {
+        position: fixed;
+        top: 10px;
+        right: 10px;
+
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 40%;
+        background-color: rgb(167, 201, 231);
+        padding: 10px;
+        border-radius: 8px;
+        padding: 30px;
+    }
+
+    input, button {
+        padding: 10px;
+        outline: none;
+        border-radius: 10px;
+        margin-top: 5px;
+    }
+
+    input {
+        width: 78%;
+    }
+
+    #buttons {
+        margin-top: 7px;
+        display: flex;
+        gap: 20px;
+    }
+
+    button:hover {
+    background-color: green;
+    color: white;
+    
+}
+
+    
+</style>
+<body>
+    <a href="/">Go home</a>
+    <h3>Add staff</h3>
+
+    <form action="/add_staff_info" method="post">
+        <input type="number" placeholder="Enter personal number" name="staffNo" required>
+        <input type="text" placeholder="Enter Both names" name="staffName" required>
+        <input type="text" placeholder="Enter Desk of work" name="staffDesk" required>
+        <input type="number" placeholder="Enter Phone number" name="staffPhoneNo" required>
+        <div id="buttons">
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+        </div>
+    </form>
+</body>
+</html>

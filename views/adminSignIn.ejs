@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin SignIn</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: cursive;
+            outline: none;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            
+        }
+
+        #loginForm {
+            display: flex;
+            flex-direction: column;
+            width: 70%;
+            padding: 30px;
+            background-color: rgb(167, 201, 231);
+            border-radius: 7px;
+            margin-top: 20px; 
+        }
+
+        h4, input {
+            font-size: 15px;
+            margin: 5px;
+            text-align: center;
+        }
+
+        input {
+            padding: 5px;
+            border: none;
+            border-radius: 3px;
+            outline: none;
+        }
+
+        #goBtn {
+            background-color: rgb(55, 55, 230);
+            color: white;
+            cursor: pointer;
+        }
+
+        #logo {
+            width: 200px; /* Adjust size as needed */
+            transform: translate(-20%,0%);
+        }
+
+        #linktohome {
+        position: fixed;
+        top: 10px;
+        right: 10px;
+        
+
+    }
+    </style>
+</head>
+<body>
+    <a href="/" id="linktohome">Go home</a>
+    <img id="logo" src="/img/logo.png" alt="Logo">
+    <h3></h3>
+    <form action="/signAsAdmin" method="post">
+        <div id="loginForm">
+            <select name="choice" id="choice"required>
+                <option value="">choose option</option>
+                <option value="center_manager">Center Manager</option>
+                <option value="super_admin">Super Admin</option>
+            </select><br>
+            <input type="text" name="username" placeholder="Username" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <input type="submit" id="goBtn" value="Go">
+        </div>
+    </form>
+</body>
+</html>

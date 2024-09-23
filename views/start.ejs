@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Huduma center registry</title>
+</head>
+
+<style>
+   
+   * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: cursive;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#every {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto; /* Centers the content vertically */
+    width: 400px;
+    
+}
+
+img {
+    margin-top: -170px;
+}
+
+#greetings {
+    display: flex;
+    font-size: 20px;
+    font-family: cursive;
+    margin: 20px 0px 50px 0px;
+}
+
+#options {
+    width: 100%;
+    background-color: aliceblue;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 20px;
+       
+}
+
+#options button {
+    width: 120px;
+    height: 45px;
+    border: none;
+    border-radius: 20px;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    font-size: 15px;
+}
+
+button:hover {
+    background-color: green;
+    color: white;
+    
+}
+
+#myForm {
+    margin-top: 40px;
+    display: none;
+    justify-content: center;
+    gap: 10px;
+    font-size: 20px;
+    
+}
+
+#personalNum {
+width: 250px;
+text-align: center;
+padding: 10px;
+font-size: 15px;
+
+}
+
+
+
+#ok {
+    padding: 15px;
+}
+
+#signAsAdmin {
+    margin-bottom: 5px;
+}
+
+
+
+footer {
+    width: 100%;
+    text-align: center;
+    padding: 1px;
+    background-color: #f1f1f1; 
+}
+
+</style>
+<body>
+    <div id="every">
+        <img src="/img/logo.png" alt="not found">
+        <p id="greetings"></p>
+
+        <div id="options">
+            <a href="/signIn/give_personalNumber">
+                <button id="signin">Sign in</button>
+            </a>
+            <a href="/signOut/give_personalNumber">
+                <button id="signout">Sign out</button>
+            </a>
+        </div>
+        
+    </div>
+    <div id="signAsAdmin"><a href="/signAsAdmin">SignIn as admin</a></div>
+    <footer>
+        <p>Copyright &#169; 2024 - zack.</p>
+    </footer>
+</body>
+<script>
+    var hourNow = new Date().getHours();
+
+    const greetings = document.getElementById('greetings');
+
+    if(hourNow >= 0 && hourNow < 12) {
+        greetings.innerHTML = "Good Morning..."
+    }else if(hourNow >= 12 && hourNow < 16) {
+        greetings.innerHTML = "Good Afternoon..."
+    }else {
+        greetings.innerHTML = "Good evening..."
+    }
+
+    const signIn = document.getElementById("signin");
+    const signOut = document.getElementById("signout");
+    const myForm = document.getElementById("myForm");
+    const options = document.getElementById("options");
+    
+
+    signIn.addEventListener('click', () => {
+        myForm.style.display = 'flex'
+        options.style.display = 'none'
+    })
+
+    signOut.addEventListener('click', () => {
+        myForm.style.display = 'flex'
+        options.style.display = 'none'
+    })
+
+    myForm.addEventListener('submit', () => {
+        options.style.display = 'none'
+        myDetailsForm.style.display = 'block'
+    })
+
+</script>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>No Details</title>
+</head>
+
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+
+    }
+
+    body {
+        display: flex;
+        /* justify-content: center; */
+        align-items: center;
+        height: 100vh;
+        flex-direction: column;
+        font-family: Verdana, Arial, Helvetica, sans-serif;
+        background-color: white;
+    }
+
+    img {
+        width: 170px;
+        height: auto;
+        margin: 40px 0 20px;
+    }
+
+    form {
+        max-width: 650px;
+        height: auto;
+        background-color: aliceblue;
+        padding: 30px;
+        border-radius: 7px;
+        box-shadow: 0 4px 8px rgba(255, 0, 0, 0.6);
+        
+    }
+
+    form p {
+        font-size: 22px;
+        margin-bottom: 15px;
+    }
+
+    form input[type="submit"] {
+        padding: 7px 35px;
+        background-color: #007BFF;
+        color: white;
+        border: none;
+        border-radius: 4px;
+    }
+
+    form input[type="submit"]:hover {
+        background-color: #0056b3;
+    }
+</style>
+<body>
+    <img src="/img/logo.png" alt="logo">
+    <script>
+        const state = "<%= state%>";
+    </script>
+
+    <form id="noDetailsForm" method="get">
+        <p>No details found for the provided personal number. Wanna try again?</p>
+        <input type="submit" value="OK">
+    </form>
+
+    <script>
+    
+        document.addEventListener("DOMContentLoaded", function() {
+            var noDetailsForm = document.getElementById("noDetailsForm");
+
+            if(state === "signedIn") {
+                noDetailsForm.action = "/signIn/give_personalNumber";
+            }else if(state === "signedOut") {
+                noDetailsForm.action = "/signOut/give_personalNumber";
+            }
+
+
+        });
+    
+    </script>
+</body>
+
+
+</html>

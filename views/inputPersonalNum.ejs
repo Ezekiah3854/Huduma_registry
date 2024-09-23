@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secter Number</title>
+</head>
+
+<style>
+   
+   * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: cursive;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#every {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    width: 80%;
+    
+}
+
+img {
+    margin-top: -170px;
+    width: 220px;
+    height: auto;
+}
+
+#greetings {
+    display: flex;
+    font-size: 20px;
+    font-family: cursive;
+    margin: 20px 0px 50px 0px;
+}
+
+
+button:hover {
+    background-color: green;
+    color: white;
+    
+}
+
+#myForm {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    font-size: 20px;
+    
+}
+
+#personalNum {
+    width: 260px;
+    text-align: center;
+    padding: 10px;
+    font-size: 15px;
+    max-width: 270px;
+}
+
+
+
+#ok {
+    padding: 15px;
+}
+
+footer {
+    width: 100%;
+    text-align: center;
+    padding: 1rem 0;
+    background-color: #f1f1f1; /* Optional: Add a background color for the footer */
+}
+
+</style>
+<body>
+    <div id="every">
+        <img src="/img/logo.png" alt="not found">
+        <p id="greetings"></p>
+
+        
+        <form id="myForm" action="/search_details" method="post">
+            <input type="password" name="personalNumber" id="personalNum" placeholder="Enter your personal number..." required>
+            <input type="submit" id="ok" value="OK">
+        </form>
+    </div>
+
+    <footer>
+        <p>Copyright &#169; 2024 - zack.</p>
+    </footer>
+</body>
+<script>
+    var hourNow = new Date().getHours();
+
+    const greetings = document.getElementById('greetings');
+
+    if(hourNow >= 0 && hourNow < 12) {
+        greetings.innerHTML = "Good Morning..."
+    }else if(hourNow >= 12 && hourNow < 16) {
+        greetings.innerHTML = "Good Afternoon..."
+    }else {
+        greetings.innerHTML = "Good evening..."
+    }
+
+
+</script>
+</html>

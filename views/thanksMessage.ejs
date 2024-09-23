@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Huduma Kenya</title>
+</head>
+
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+       
+    }
+
+    body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 70%;
+        background-color: aliceblue;
+        align-items: center;
+        padding: 40px 20px;
+        border-radius: 7px;
+        margin-top: 40px;
+    }
+
+    h3 {
+        margin-bottom: 20px;
+        font-size: 20px;
+    }
+
+    #ok {
+        width: 30%;
+        background-color: blue;
+        color: white;
+        border: none;
+        padding: 10px;
+        font-size: larger;
+        border-radius: 5px;
+        height: 45px;
+    }
+</style>
+
+<body>
+    <img id="logo" src="/img/logo.png" alt="Logo">
+    <form action="/" method="get">
+        <h3>Welcome <%= welcome.name%> at Huduma Centre today, We wish you a great Day ahead. Thank you...😊</h3>
+        <input id="ok" type="submit" value="OK">
+    </form>
+</body>
+</html>
