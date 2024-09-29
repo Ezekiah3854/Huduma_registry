@@ -3,10 +3,10 @@
 The Staff Attendance Registry is a system designed to help organizations track staff attendance by allowing each staff member to sign in when reporting to work and sign out when leaving. This system streamlines attendance management, providing a clear record of employee working hours.
 
 # **Features**
-Staff sign-in and sign-out functionality.
-Real-time tracking of attendance records.
-Simple, intuitive user interface.
-Accurate logging of work hours for each staff member.
+Staff sign-in and sign-out functionality.  
+Real-time tracking of attendance records.  
+Simple, intuitive user interface.  
+Accurate logging of work hours for each staff member.  
 
 # **Technologies Used**
 Programming language: HTML, CSS, JavaScript an Python.
